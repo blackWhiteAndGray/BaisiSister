@@ -1,4 +1,4 @@
-<!-- <van-nav-bar title="推荐关注" left-text="返回" fixed left-arrow bind:click-left="onClickLeft" bind:click-right="onClickRight" /> -->
+<van-nav-bar title="推荐关注" wx:if="{{ floorstatus }}" left-text="返回" fixed left-arrow bind:click-left="onClickLeft" bind:click-right="onClickRight" />
 
 <scroll-view scroll-y="true" bindscroll="scroll" scroll-top="{{scrollTop}}" bindscrolltolower="getMore" style="position:absolute; top:0; left:0; right:0; bottom:0;">
   <van-search value="{{ value }}" placeholder="请输入搜索关键词" />

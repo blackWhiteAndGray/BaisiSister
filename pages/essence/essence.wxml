@@ -1,0 +1,134 @@
+<view>
+  <van-nav-bar title="百撕不得姐" animation="{{animationData}}" wx:if="{{ floorstatus }}" fixed bind:click-left="onClickLeft" bind:click-right="onClickRight" />
+</view>
+
+<scroll-view class='hn-essence' scroll-y="true" bindscroll="scroll">
+  <!-- 轮播图 -->
+  <view>
+    <image src='{{cardBg}}' class='card-bg'></image>
+    <swiper indicator-dots="{{indicatorDots}}" class="sw_indx" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}" wx:key="*this">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" bindtap='toItemRule' />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 产品推荐 -->
+  <view bindtap='toPage' data-pageid='moreProduct' class='cell-title'>
+    <text>•</text>产品推荐
+    <text>•</text>
+    <text class="righthead">更多</text>
+  </view>
+  <view class='cell product'>
+    <view class='equal'>
+      <view class='equal-box' bindtap='toPage' data-pageid='product' data-type='0' data-name='瓷砖'>
+        <image src='{{iconCizhuan}}' class='product-icon'></image>
+        <text class='pro-name'>\n瓷砖</text>
+      </view>
+      <view class='equal-box' bindtap='toPage' data-pageid='product' data-type='2' data-name='卫浴'>
+        <image src='{{iconWeiyu}}' class='product-icon'></image>
+        <text class='pro-name'>\n卫浴</text>
+      </view>
+      <view class='equal-box' bindtap='toPage' data-pageid='product' data-type='6' data-name='家具'>
+        <image src='{{iconJiaju}}' class='product-icon'></image>
+        <text class='pro-name'>\n家具</text>
+      </view>
+      <view class='equal-box' bindtap='toPage' data-pageid='product' data-type='4' data-name='橱柜'>
+        <image src='{{iconChugui}}' class='product-icon'></image>
+        <text class='pro-name'>\n橱柜</text>
+      </view>
+    </view>
+  </view>
+  <!-- 贴心服务 -->
+  <view class='cell-title'>
+    <text>•</text>贴心服务
+    <text>•</text>
+  </view>
+  <view class='cell'>
+    <view class='equal service'>
+      <view class='equal-box'>
+        <image src='{{picScale}}' class='one-image' bindtap='toPage' data-pageid='scale'></image>
+      </view>
+      <view class='equal-box'>
+        <image src='{{picHotactivity}}' class='two-image' bindtap='toPage' data-pageid='hotActivity'></image>
+        <image src='{{picPuliccomment}}' class='two-image' bindtap='toPage' data-pageid='publicComment'></image>
+      </view>
+    </view>
+  </view>
+  <view class='cell-title'>
+    <image src='{{picHead1}}' class='head-img'></image>
+  </view>
+  <view class='cell-title brand-title blod-font'>
+    <text>•</text>汇聚一线品牌
+    <text class='colorIsBlue blod-font'>优质产品</text>一站购齐
+    <text>•</text>
+  </view>
+  <!--品牌  -->
+  <view class='cell brand'>
+    <view class='equal'>
+      <view class='equal-box' bindtap='toPage' data-pageid='brand' data-brand='00#25#' data-name='马可波罗'>
+        <image src='{{iconMarco}}' class='brand-icon'></image>
+      </view>
+      <view class='equal-box' bindtap='toPage' data-pageid='brand' data-brand='05#20#' data-name='箭牌'>
+        <image src='{{iconArrow}}' class='brand-icon'></image>
+      </view>
+      <view class='equal-box' bindtap='toPage' data-pageid='brand' data-brand='01#' data-name='蒙娜丽莎'>
+        <image src='{{iconMona}}' class='brand-icon'></image>
+      </view>
+    </view>
+    <view class='equal marTopIs10'>
+      <view class='equal-box' bindtap='toPage' data-pageid='brand' data-brand='21#06#' data-name='法恩莎'>
+        <image src='{{iconFaenzr}}' class='brand-icon'></image>
+      </view>
+      <view class='equal-box' bindtap='toPage' data-pageid='brand' data-brand='40#' data-name='卡贝'>
+        <image src='{{iconCobbe}}' class='brand-icon'></image>
+      </view>
+      <view class='equal-box ' bindtap='toPage' data-pageid='brand' data-brand='64#' data-name='爱驰'>
+        <image src='{{iconAichi}}' class='brand-icon'></image>
+      </view>
+    </view>
+    <view class='equal marTopIs10'>
+      <view class='equal-box' bindtap='toPage' data-pageid='brand' data-brand='73#' data-name='海尔'>
+        <image src='{{iconHaier}}' class='brand-icon'></image>
+      </view>
+      <view class='equal-box' bindtap='toPage' data-pageid='brand' data-brand='60#' data-name='好莱客'>
+        <image src='{{iconHolike}}' class='brand-icon'></image>
+      </view>
+      <view class='equal-box ' bindtap='toPage' data-pageid='brand' data-brand='57#' data-name='我乐橱柜'>
+        <image src='{{iconOlo}}' class='brand-icon'></image>
+      </view>
+    </view>
+  </view>
+  <!--预约服务  -->
+  <view class='cell-title brand-title blod-font'>
+    <text>•</text>一键预约
+    <text class='colorIsBlue blod-font'>一对一专属服务</text>
+    <text>•</text>
+  </view>
+  <view class='cell scale'>
+    <view class='scale-button' bindtap='toPage' data-pageid='scale'>点击预约</view>
+    <image src='{{picScaleIntro}}' class='scale-intro'></image>
+  </view>
+  <!--我们的优势  -->
+  <view class='cell-title brand-title blod-font'>
+    <text>•</text>我们的优势
+    <text>•</text>
+  </view>
+  <view class='cell advantage'>
+    <image src='{{picAdvantage}}' class='advantage-image'></image>
+  </view>
+  <!-- 弹窗 -->
+  <!-- 弹窗 -->
+  <modal title="温馨提示：" confirm-text="" cancel-text="" hidden="{{modalHidden}}" bindconfirm="addMemCard" bindcancel="cancellChange">
+    您还未激活华耐会员,请先激活。
+    <navigator class="mini-btn" target="miniProgram" app-id="wxeb490c6f9b154ef9" extra-data="{{hnextraData}}">
+      <button type="primary" bindtap='addMemCard'>点我会员卡开卡</button>
+    </navigator>
+  </modal>
+
+  <modal title="温馨提示：" confirm-text="我已激活" cancel-text="以后再说" hidden="{{jhmodalHidden}}" bindconfirm="qrjh" bindcancel="cancellChange">
+    您是否已经激活会员。
+  </modal>
+  <!-- </view> -->
+</scroll-view>

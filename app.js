@@ -34,6 +34,18 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    hasLogin: false,
+    openid: null,
+    wxcode: null,
+    userInfo: null,
+    vipAppId: 'wxb785adc6d8519686',
+    wxurl: 'https://wx.4006002222.com/wxmppc/WxService?method=',
+    memberCardid: 'pZv8rsz0E5BTkH6Tuqn0zqEnN_es',
+    wxImgUrl: 'http://wx.4006002222.com/qyweb',
+    ztUrl: 'https://wx.4006002222.com/ztapi',
+    ztImgUrl: 'http://image.4006002222.com',
+    qyUrl: 'https://wx.huanai.com/qy/WxService?method=',
+    MemberCard: '',
+    store_eid: "b73680c334984f358a9567e135805b6e" //门店评价模板id
   }
 })

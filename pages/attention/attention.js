@@ -122,16 +122,10 @@ Page({
     if (e.detail.scrollTop > 100) {
       this.setData({
         floorstatus: true
-      });
-      wx.setBackgroundColor({
-        backgroundColor: '#C71585'
       })
     } else {
       this.setData({
         floorstatus: false
-      });
-      wx.setBackgroundColor({
-        backgroundColor: '#0000FF'
       })
     }
   }
