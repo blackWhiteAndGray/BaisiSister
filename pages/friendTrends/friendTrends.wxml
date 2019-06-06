@@ -1,0 +1,11 @@
+<view class="hn-essence">
+  <view class="section__ctn">
+    <image style="width: 48px; height: 48px; background-color: #eeeeee;" mode="{{mode}}" src="{{src}}"></image>
+  </view>
+  <view class='section_mes'>
+    <text>{{text}}</text>
+  </view>
+  <view class='section_btn'>
+    <button class='login_btn' type="warn" plain="{{plain}}" disabled="{{disabled}}" bindtap="login" hover-class="other-button-hover"> 登录 </button>
+  </view>
+</view>

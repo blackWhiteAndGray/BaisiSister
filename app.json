@@ -1,13 +1,17 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/essence/essence",
+    "pages/friendTrends/friendTrends",
+    "pages/new/new",
+    "pages/me/me",
+    "pages/attention/attention"
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "百思不得姐",
+    "navigationBarBackgroundColor": "#f8f900",
+    "backgroundColor": "#F8F8F8",
+    "navigationStyle": "custom"
   },
   "tabBar": {
     "color": "#707070",
@@ -16,30 +20,36 @@
     "borderStyle": "white",
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/essence/essence",
         "iconPath": "images/hn/home1.png",
         "selectedIconPath": "images/hn/home2.png",
         "text": "精华"
       },
       {
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/new/new",
         "iconPath": "images/hn/icon-store1.png",
         "selectedIconPath": "images/hn/icon-store2.png",
         "text": "新帖"
       },
       {
-        "pagePath": "pages/index/index",
-        "iconPath": "images/hn/my2.png",
-        "selectedIconPath": "images/hn/my2.png",
+        "pagePath": "pages/friendTrends/friendTrends",
+        "iconPath": "images/hn/icon-store1.png",
+        "selectedIconPath": "images/hn/icon-store2.png",
         "text": "关注"
       },
       {
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/me/me",
         "iconPath": "images/hn/my1.png",
         "selectedIconPath": "images/hn/my2.png",
         "text": "我"
       }
     ]
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  }
 }

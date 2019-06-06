@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "推荐关注",
+  "usingComponents": {
+    "van-search": "/lib/search/index",
+    "van-cell": "/lib/cell/index",
+    "van-cell-group": "/lib/cell-group/index",
+    "van-icon": "/lib/icon/index",
+    "van-nav-bar": "/lib/nav-bar/index",
+    "van-transition": "/lib/transition/index"
+  }
+}
