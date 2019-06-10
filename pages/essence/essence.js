@@ -254,7 +254,7 @@ Page({
    */
   scroll: function(e) {
     var animation = wx.createAnimation({
-      duration: 1000,
+      duration: 400,
       timingFunction: 'linear',
     })
 
